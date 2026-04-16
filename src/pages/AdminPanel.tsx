@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { collection, addDoc, serverTimestamp, onSnapshot, query, orderBy, deleteDoc, doc, setDoc, getDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL, deleteObject } from 'firebase/storage';
 import { db, storage } from '../lib/firebase';
-import { Lock, Upload, FileJson, CheckCircle2, AlertCircle, Loader2, Trash2, Database, ImagePlus, BookOpen } from 'lucide-react';
+import { Lock, Upload, FileJson, CheckCircle2, AlertCircle, Loader2, Trash2, Database, ImagePlus, BookOpen, Youtube } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { Link } from 'react-router-dom';
 
