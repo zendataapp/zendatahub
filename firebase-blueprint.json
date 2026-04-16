@@ -1,0 +1,59 @@
+{
+  "entities": {
+    "DataBatch": {
+      "title": "Data Batch",
+      "description": "A batch of data uploaded by the admin.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "qaCount": { "type": "number" },
+        "linesCount": { "type": "number" },
+        "charCount": { "type": "number" },
+        "isHero": { "type": "boolean" },
+        "fileUrl": { "type": "string" },
+        "fileName": { "type": "string" },
+        "createdAt": { "type": "timestamp" }
+      },
+      "required": ["title", "category", "qaCount", "linesCount", "charCount", "isHero", "createdAt"]
+    },
+    "GlobalStats": {
+      "title": "Global Stats",
+      "description": "Aggregated statistics for all data batches.",
+      "type": "object",
+      "properties": {
+        "totalQa": { "type": "number" },
+        "totalLines": { "type": "number" },
+        "totalChars": { "type": "number" }
+      },
+      "required": ["totalQa", "totalLines", "totalChars"]
+    },
+    "Blog": {
+      "title": "Blog Post",
+      "description": "A blog post created by the admin.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "shortSummary": { "type": "string" },
+        "content": { "type": "string" },
+        "createdAt": { "type": "timestamp" }
+      },
+      "required": ["title", "shortSummary", "content", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/data_batches/{batchId}": {
+      "schema": { "$ref": "#/entities/DataBatch" },
+      "description": "Collection of all data batches."
+    },
+    "/stats/global": {
+      "schema": { "$ref": "#/entities/GlobalStats" },
+      "description": "Singleton document storing global stats."
+    },
+    "/blogs/{blogId}": {
+      "schema": { "$ref": "#/entities/Blog" },
+      "description": "Collection of all blog posts."
+    }
+  }
+}
