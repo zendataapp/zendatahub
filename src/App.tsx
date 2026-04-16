@@ -19,8 +19,8 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog/:id" element={<BlogPost />} />
-        <Route path="/uma-hidden-786" element={<AdminPanel />} />
-        <Route path="/uma-blog-admin-786" element={<BlogAdmin />} />
+        <Route path="/admin" element={<AdminPanel />} />
+        <Route path="/blog-admin" element={<BlogAdmin />} />
       </Routes>
     </Router>
   );
