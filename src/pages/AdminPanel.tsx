@@ -311,7 +311,7 @@ function AdminDashboard() {
       <div className="max-w-5xl mx-auto mb-8 flex justify-between items-center">
         <h1 className="text-2xl font-bold">Main Admin Panel</h1>
         <Link 
-          to="/uma-blog-admin-786" 
+          to="/blog-admin" 
           className="flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-medium transition-all shadow-lg shadow-purple-500/20"
         >
           <BookOpen className="w-5 h-5" />

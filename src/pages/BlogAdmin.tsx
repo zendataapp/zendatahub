@@ -66,7 +66,7 @@ export default function BlogAdmin() {
             </button>
           </form>
           <div className="mt-6 text-center">
-            <Link to="/uma-hidden-786" className="text-sm text-gray-500 hover:text-white transition-colors">
+            <Link to="/admin" className="text-sm text-gray-500 hover:text-white transition-colors">
               Back to Main Admin
             </Link>
           </div>
